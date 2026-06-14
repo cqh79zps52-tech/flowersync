@@ -1,7 +1,7 @@
 {
 	"id": "flower-sync",
 	"name": "Flower Sync",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"minAppVersion": "1.4.0",
 	"description": "End-to-end encrypted, bidirectional vault sync with Google Drive. Works on iOS and desktop, with line-level conflict resolution.",
 	"author": "Flower",
