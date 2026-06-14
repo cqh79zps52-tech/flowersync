@@ -1,0 +1,125 @@
+/* ===== Flower Sync styles ===== */
+
+/* --- Status bar --- */
+.flower-statusbar {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+.flower-statusbar.is-error {
+	color: var(--text-error);
+}
+.flower-statusbar.is-locked {
+	color: var(--text-warning);
+}
+.flower-statusbar .flower-spin svg {
+	animation: flower-spin 1s linear infinite;
+}
+@keyframes flower-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* --- Ribbon icon spinning while syncing --- */
+.flower-ribbon-syncing svg {
+	animation: flower-spin 1s linear infinite;
+}
+
+/* --- Conflict modal --- */
+.flower-conflict-modal {
+	width: min(900px, 90vw);
+}
+.flower-conflict-header {
+	margin-bottom: 8px;
+}
+.flower-conflict-path {
+	font-family: var(--font-monospace);
+	font-weight: var(--font-bold);
+	word-break: break-all;
+}
+.flower-diff {
+	max-height: 50vh;
+	overflow: auto;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	background: var(--background-primary);
+	font-family: var(--font-monospace);
+	font-size: var(--font-smaller);
+	line-height: 1.5;
+	white-space: pre-wrap;
+	word-break: break-word;
+	padding: 6px 0;
+}
+.flower-diff-line {
+	display: flex;
+	padding: 0 8px;
+}
+.flower-diff-gutter {
+	flex: 0 0 1.5em;
+	user-select: none;
+	opacity: 0.6;
+	text-align: center;
+}
+.flower-diff-add {
+	background: rgba(0, 170, 0, 0.15);
+}
+.flower-diff-del {
+	background: rgba(220, 0, 0, 0.15);
+}
+.flower-diff-truncated {
+	padding: 6px 8px;
+	font-style: italic;
+	opacity: 0.7;
+}
+.flower-conflict-meta {
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--font-smaller);
+	color: var(--text-muted);
+	margin: 6px 0;
+}
+.flower-conflict-buttons {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+	margin-top: 12px;
+	flex-wrap: wrap;
+}
+
+/* --- Log modal --- */
+.flower-log {
+	max-height: 60vh;
+	overflow: auto;
+	font-family: var(--font-monospace);
+	font-size: var(--font-smaller);
+	white-space: pre-wrap;
+	word-break: break-word;
+	background: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	padding: 8px;
+}
+.flower-log-line.is-error {
+	color: var(--text-error);
+}
+.flower-log-line.is-warn {
+	color: var(--text-warning);
+}
+
+/* --- Settings helpers --- */
+.flower-setting-warning {
+	color: var(--text-warning);
+	font-size: var(--font-smaller);
+	margin: 4px 0 12px;
+}
+.flower-setting-status-ok {
+	color: var(--text-success);
+}
+.flower-setting-status-bad {
+	color: var(--text-error);
+}
